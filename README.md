@@ -25,7 +25,7 @@ ambrosio/
 
 ```bash
 cd ambrosio
-claude
+claude remote-control --name Ambrosio
 ```
 
 `settings.json` sets `"agent": "chief-of-staff"`, so every session here *is* the chief of staff. Before any MCP server is connected only `researcher` and `finance` are fully functional; try:
