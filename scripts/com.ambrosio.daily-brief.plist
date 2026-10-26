@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <!--
+    Install on the Mac Mini:
+      1. Replace /Users/YOU/ambrosio below with the real path.
+      2. Add any secrets your MCP servers need under EnvironmentVariables.
+      3. cp scripts/com.ambrosio.daily-brief.plist ~/Library/LaunchAgents/
+         launchctl load ~/Library/LaunchAgents/com.ambrosio.daily-brief.plist
+  -->
+  <key>Label</key>
+  <string>com.ambrosio.daily-brief</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/bash</string>
+    <string>/Users/YOU/ambrosio/scripts/daily-brief.sh</string>
+  </array>
+
+  <key>StartCalendarInterval</key>
+  <dict>
+    <key>Hour</key>
+    <integer>7</integer>
+    <key>Minute</key>
+    <integer>30</integer>
+  </dict>
+
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>PATH</key>
+    <string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin</string>
+  </dict>
+
+  <key>StandardOutPath</key>
+  <string>/Users/YOU/ambrosio/runs/launchd.out.log</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/YOU/ambrosio/runs/launchd.err.log</string>
+</dict>
+</plist>

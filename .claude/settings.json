@@ -1,0 +1,44 @@
+{
+  "agent": "chief-of-staff",
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch",
+      "mcp__calendar",
+      "mcp__mail",
+      "mcp__ms365"
+    ],
+    "deny": [
+      "Bash(rm -rf *)",
+      "Read(./.env)",
+      "Read(./**/*.key)",
+      "Read(./**/*.pem)"
+    ]
+  },
+  "env": {
+    "CLAUDE_CODE_MAX_SUBAGENT_SPAWN_DEPTH": "2"
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "mcp__.*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/guard-irreversible.sh"
+          }
+        ]
+      }
+    ],
+    "SubagentStop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/audit-log.sh"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+- [Principal](project_build_for_friend.md) — Eduardo Penedos, call him "Dudu"; Sales Specialist Palo Alto Networks, Idira (ex-CyberArk); real estate dropped
+- [Address in "tu"](feedback_address_tu.md) — informal "tu" + Dudu, never "o senhor"; like his daughter Filipa
+- [Maintainer follow-ups](project_pending_maintainer.md) — hook+audit done 10-19; open: chmod CLAUDE.md, jarvis cleanup (not run), connector allow-list, setup notes
+- [Calendar wiring](project_calendar_wiring.md) — soshin.ai calendar is Dudu's REAL account; Palo Alto not connected; test event Novo Hotel 21/10 (cancel? ask)
+- [Guard hook gap](project_guard_hook_gap.md) — CLOSED 10-19: deny tier (send/delete/...) + ask tier (reply/forward, calendar notify); drafts free
+- [Mail wiring](project_mail_wiring.md) — soshin.ai Gmail is Dudu's REAL mailbox (sends go out under his name); Palo Alto not connected
+- [Outlook wiring](project_outlook_wiring.md) — ms365 read-only = Dudu's netcabo mailbox; wired + logged in 10-19; re-login remotely via device code
+- [iCloud wiring](project_icloud_wiring.md) — iCloud mail+contacts: no connector; candidate eodozzy/icloud-mcp read-only; pending review/decision
+- [Remote access](project_remote_access.md) — Remote Control first, iMessage next; WhatsApp only via official API; hook test pending

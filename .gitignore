@@ -1,0 +1,6 @@
+.env
+.ambrosio-approve
+.claude/settings.local.json
+.claude/agent-memory-local/
+runs/
+data/

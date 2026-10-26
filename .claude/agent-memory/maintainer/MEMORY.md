@@ -1,0 +1,2 @@
+- [Guard hook design](project_guard_hook_design.md) — deny vs ask tiers, what is exempt, headless caveat (2026-10-19)
+- [Researcher specialisation](project_researcher_specialisation.md) — Idira-focused researcher, modes, radar hook in daily-brief (2026-10-19)
